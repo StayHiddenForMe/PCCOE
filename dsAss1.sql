@@ -88,3 +88,28 @@ select * FROM Salespeople where Sname like 'G__a%';
 
 --Q11
 select * FROM Salespeople where City is NULL;
+
+
+
+
+--2.Q1
+SELECT count(*) from customers where city = 'Pune';
+
+--2.Q2
+select count(*) from orders where Odate between '01-Jan-16' and '1-mar-16';
+
+--2.Q3
+select * from salespeople where commission=(select MAX(commission) from salespeople);
+
+--2.Q4
+select min(amt),max(amt),avg(amt),count(amt) from orders where Odate between '01-Jan-16' and '1-dec-16';
+
+--2.Q5
+
+
+--2.Q6
+select * from (select * from orders order by amt desc) where ROWNUM<4;
+--FROM (SELECT column_name(s) FROM table_name ORDER BY column_name(s))
+
+--2.Q7
+
